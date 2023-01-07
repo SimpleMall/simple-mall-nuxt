@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { InitApp } from '~/utils/initApp'
-InitApp()
-const locale = useState<string>('locale.i18n')
+  import { InitApp } from '~/utils/initApp';
+  InitApp();
+  const locale = useState<string>('locale.i18n');
 </script>
 
 <template>
@@ -17,10 +17,10 @@ const locale = useState<string>('locale.i18n')
 </template>
 
 <style lang="postcss">
-body {
-  @apply bg-gray-50 dark:bg-gray-800;
-}
-.global-text {
-  @apply text-gray-900 dark:text-gray-50;
-}
+  body {
+    @apply bg-gray-50 dark:bg-gray-800;
+  }
+  .global-text {
+    @apply text-gray-900 dark:text-gray-50;
+  }
 </style>

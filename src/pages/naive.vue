@@ -1,15 +1,21 @@
 <script setup lang="ts">
-import { darkTheme, lightTheme } from 'naive-ui'
-const color = useColorMode()
-const theme = computed(() => {
-  return color.preference === 'system' ? (color.value ? lightTheme : darkTheme) : color.value === 'light' ? lightTheme : darkTheme
-})
+  import { darkTheme, lightTheme } from 'naive-ui';
+  const color = useColorMode();
+  const theme = computed(() => {
+    return color.preference === 'system'
+      ? color.value
+        ? lightTheme
+        : darkTheme
+      : color.value === 'light'
+      ? lightTheme
+      : darkTheme;
+  });
 
-const router = useRouter()
+  const router = useRouter();
 
-onUnmounted(() => {
-  document.body.attributes.removeNamedItem('style')
-})
+  onUnmounted(() => {
+    document.body.attributes.removeNamedItem('style');
+  });
 </script>
 
 <template>
@@ -25,9 +31,7 @@ onUnmounted(() => {
           </div>
         </div>
         <div class="grid grid-cols-1 gap-6">
-          <NButton @click="router.push('/')">
-            Back Home
-          </NButton>
+          <NButton @click="router.push('/')"> Back Home </NButton>
           <p>Nuxt module naive ui!</p>
           <NButton>Default</NButton>
           <NInput placeholder="NInput" />
@@ -71,16 +75,12 @@ onUnmounted(() => {
           <NEmpty />
           <NEl>NEl</NEl>
           <NGradientText>NGradientText</NGradientText>
-          <NH1 id="NH1">
-            H1
-          </NH1>
+          <NH1 id="NH1"> H1 </NH1>
           <NHr />
           <NA>NA</NA>
           <NTag>NTag</NTag>
           <NText>NText</NText>
-          <NBadge :value="999">
-            NBadge
-          </NBadge>
+          <NBadge :value="999"> NBadge </NBadge>
         </div>
       </div>
     </NConfigProvider>

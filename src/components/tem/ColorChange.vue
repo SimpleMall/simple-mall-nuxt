@@ -1,41 +1,35 @@
 <script lang="ts" setup>
-import {
-  Listbox,
-  ListboxButton,
-  ListboxLabel,
-  ListboxOption,
-  ListboxOptions,
-} from '@headlessui/vue'
-const colorMode = useColorMode()
-const availableColor = ref([
-  {
-    id: 1,
-    name: 'system',
-    icon: 'i-ph-laptop-duotone',
-  },
-  {
-    id: 2,
-    name: 'dark',
-    icon: 'i-ph-moon-stars-duotone',
-  },
-  {
-    id: 3,
-    name: 'light',
-    icon: 'i-ph-sun-dim-duotone',
-  },
-])
+  import {
+    Listbox,
+    ListboxButton,
+    ListboxLabel,
+    ListboxOption,
+    ListboxOptions,
+  } from '@headlessui/vue';
+  const colorMode = useColorMode();
+  const availableColor = ref([
+    {
+      id: 1,
+      name: 'system',
+      icon: 'i-ph-laptop-duotone',
+    },
+    {
+      id: 2,
+      name: 'dark',
+      icon: 'i-ph-moon-stars-duotone',
+    },
+    {
+      id: 3,
+      name: 'light',
+      icon: 'i-ph-sun-dim-duotone',
+    },
+  ]);
 </script>
 
 <template>
   <div>
-    <Listbox
-      v-model="$colorMode.preference"
-      as="div"
-      class="relative flex items-center"
-    >
-      <ListboxLabel class="sr-only">
-        Theme
-      </ListboxLabel>
+    <Listbox v-model="$colorMode.preference" as="div" class="relative flex items-center">
+      <ListboxLabel class="sr-only"> Theme </ListboxLabel>
       <ListboxButton type="button" title="Change Color">
         <div
           class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700"
@@ -52,10 +46,8 @@ const availableColor = ref([
           :value="color.name"
           class="flex w-full cursor-pointer items-center justify-between py-2 px-3"
           :class="{
-            'text-white-500 bg-gray-200 dark:bg-gray-500/50':
-              colorMode.preference === color.name,
-            'hover:bg-gray-200 dark:hover:bg-gray-700/30':
-              colorMode.preference !== color.name,
+            'text-white-500 bg-gray-200 dark:bg-gray-500/50': colorMode.preference === color.name,
+            'hover:bg-gray-200 dark:hover:bg-gray-700/30': colorMode.preference !== color.name,
           }"
         >
           <span class="truncate">

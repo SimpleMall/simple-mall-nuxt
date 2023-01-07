@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import {
-  Dialog,
-  DialogOverlay,
-  DialogTitle,
-  TransitionChild,
-  TransitionRoot,
-} from '@headlessui/vue'
+  import { ref } from 'vue';
+  import {
+    Dialog,
+    DialogOverlay,
+    DialogTitle,
+    TransitionChild,
+    TransitionRoot,
+  } from '@headlessui/vue';
 
-const open = ref(false)
+  const open = ref(false);
 </script>
 
 <template>
   <div class="flex items-center justify-center">
-    <button class="rounded-lg bg-white p-4" @click="open = !open">
-      Open Modal
-    </button>
+    <button class="rounded-lg bg-white p-4" @click="open = !open"> Open Modal </button>
     <TransitionRoot as="template" :show="open">
-      <Dialog
-        as="div"
-        class="fixed inset-0 z-10 overflow-y-auto"
-        @close="open = false"
-      >
+      <Dialog as="div" class="fixed inset-0 z-10 overflow-y-auto" @close="open = false">
         <div
           class="flex min-h-screen items-end justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0"
         >
@@ -34,16 +28,13 @@ const open = ref(false)
             leave-from="opacity-100"
             leave-to="opacity-0"
           >
-            <DialogOverlay
-              class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-            />
+            <DialogOverlay class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
           </TransitionChild>
 
           <!-- This element is to trick the browser into centering the modal contents. -->
-          <span
-            class="hidden sm:inline-block sm:h-screen sm:align-middle"
-            aria-hidden="true"
-          >&#8203;</span>
+          <span class="hidden sm:inline-block sm:h-screen sm:align-middle" aria-hidden="true"
+            >&#8203;</span
+          >
           <TransitionChild
             as="template"
             enter="ease-out duration-300"
@@ -60,21 +51,16 @@ const open = ref(false)
                 <div
                   class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100"
                 >
-                  <UnoIcon
-                    class="i-ic-round-check h-6 w-6 text-lg text-green-600"
-                  />
+                  <UnoIcon class="i-ic-round-check h-6 w-6 text-lg text-green-600" />
                 </div>
                 <div class="mt-3 text-center sm:mt-5">
-                  <DialogTitle
-                    as="h3"
-                    class="text-lg font-medium leading-6 text-gray-900"
-                  >
+                  <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
                     Payment successful
                   </DialogTitle>
                   <div class="mt-2">
                     <p class="text-sm text-gray-500">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consequatur amet labore.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet
+                      labore.
                     </p>
                   </div>
                 </div>

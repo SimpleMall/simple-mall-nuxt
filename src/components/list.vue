@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ILink } from '~/types'
-defineProps({
-  link: {
-    type: Object as () => ILink,
-    required: true,
-  },
-})
+  import { ILink } from '~/types';
+  defineProps({
+    link: {
+      type: Object as () => ILink,
+      required: true,
+    },
+  });
 </script>
 
 <template>
@@ -17,9 +17,7 @@ defineProps({
         <UnoIcon :class="link.icon" class="mr-3 text-lg dark:text-gray-400" />
         {{ link.title }}
       </div>
-      <UnoIcon
-        class="i-ic-round-arrow-forward-ios global-text h-6 w-6 text-lg"
-      />
+      <UnoIcon class="i-ic-round-arrow-forward-ios global-text h-6 w-6 text-lg" />
     </div>
   </NuxtLink>
 </template>
