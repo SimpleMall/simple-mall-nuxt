@@ -41,7 +41,7 @@ export default defineNuxtConfig({
       },
       { code: 'zh', file: 'zh-CN.json' },
     ],
-    defaultLocale: 'tr',
+    defaultLocale: 'zh',
     lazy: true,
     langDir: 'locales/',
     strategy: 'prefix_except_default',

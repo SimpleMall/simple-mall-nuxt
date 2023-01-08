@@ -1,5 +1,32 @@
 {
-  "hello": "merhaba",
-  "follow": "Takip Et",
-  "modal": "Ekran"
+  "common": {
+    "search": "搜索"
+  },
+  "category": {
+    "category": "分类",
+    "womenClothing": "女装",
+    "underwear": "内衣",
+    "luxury": "奢侈品",
+    "womenShoes": "女鞋",
+    "menShoes": "男鞋",
+    "bag": "箱包",
+    "cosmetic": "美妆",
+    "accessories": "饰品",
+    "personalCare": "洗护",
+    "menClothing": "男装",
+    "sports": "运动",
+    "generalMerchandise": "百货",
+    "phone": "手机",
+    "3c": "数码",
+    "gift": "礼品",
+    "homeDecoration": "家装",
+    "appliance": "电器",
+    "carSupplies": "车品",
+    "food": "食品",
+    "fresh": "生鲜",
+    "babyCare": "母婴",
+    "medicine": "医药",
+    "healthCare": "保健",
+    "imported": "进口"
+  }
 }

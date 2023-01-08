@@ -1,5 +1,32 @@
 {
-  "hello": "hello",
-  "follow": "Follow Me",
-  "modal": "Modal"
+  "common": {
+    "search": "Search"
+  },
+  "category": {
+    "category": "Category",
+    "womenClothing": "Women's Clothing",
+    "underwear": "Underwear",
+    "luxury": "Luxury",
+    "womenShoes": "Women's Shoes",
+    "menShoes": "Men's Shoes",
+    "bag": "Bag",
+    "cosmetic": "Cosmetic",
+    "accessories": "Accessories",
+    "personalCare": "Personal Care",
+    "menClothing": "Men's Clothing",
+    "sports": "Sports",
+    "generalMerchandise": "General Merchandise",
+    "phone": "Phone",
+    "3c": "3C",
+    "gift": "Gift",
+    "homeDecoration": "Home Decoration",
+    "appliance": "Appliance",
+    "carSupplies": "Car Supplies",
+    "food": "Food",
+    "fresh": "Fresh Food",
+    "babyCare": "Baby Care",
+    "medicine": "Medicine",
+    "healthCare": "Health Care",
+    "imported": "Imported"
+  }
 }
