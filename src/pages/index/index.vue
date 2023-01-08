@@ -1,79 +1,302 @@
 <template>
   <div class="flex w-full justify-center">
     <div class="w-3/4">
-      <NGrid x-gap="10">
-        <NGi
-          span="6"
-          class="carousel-img"
-        >
-          <NCard
-            size="small"
+      <NSpace
+        vertical
+        size="large"
+      >
+        <NGrid x-gap="10">
+          <NGi
+            span="6"
             class="carousel-img"
           >
-            <NList> 
-              <template #header>
-                {{ t('category.category') }}
-              </template>
-              <NListItem
-                v-for="c in categoryData"
-                :key="c.icon"
-              >
-                <template #prefix>
-                  <Icon :icon="c.icon" />
+            <NCard
+              size="small"
+              class="carousel-img"
+            >
+              <NList>
+                <template #header>
+                  {{ t('category.category') }}
                 </template>
-                <NSpace>
-                  <NButton
-                    text
-                    @click="openUrl(c.categoryInfo[0].url)"
-                  >
-                    {{ c.categoryInfo[0].title }}
-                  </NButton>
-                  /
-                  <NButton
-                    text
-                    @click="openUrl(c.categoryInfo[1].url)"
-                  >
-                    {{ c.categoryInfo[1].title }}
-                  </NButton>
-                  /
-                  <NButton
-                    text
-                    @click="openUrl(c.categoryInfo[2].url)"
-                  >
-                    {{ c.categoryInfo[2].title }}
-                  </NButton>
-                </NSpace>
-              </NListItem>
-            </NList>
-          </NCard>
-        </NGi>
-        <NGi
-          span="18"
-          class="carousel-img"
-        >
-          <NCarousel
-            autoplay
-            centered-slides
+                <NListItem
+                  v-for="c in categoryData"
+                  :key="c.icon"
+                >
+                  <template #prefix>
+                    <Icon :icon="c.icon" />
+                  </template>
+                  <NSpace>
+                    <NButton
+                      text
+                      @click="openUrl(c.categoryInfo[0].url)"
+                    >
+                      {{ c.categoryInfo[0].title }}
+                    </NButton>
+                    /
+                    <NButton
+                      text
+                      @click="openUrl(c.categoryInfo[1].url)"
+                    >
+                      {{ c.categoryInfo[1].title }}
+                    </NButton>
+                    /
+                    <NButton
+                      text
+                      @click="openUrl(c.categoryInfo[2].url)"
+                    >
+                      {{ c.categoryInfo[2].title }}
+                    </NButton>
+                  </NSpace>
+                </NListItem>
+              </NList>
+            </NCard>
+          </NGi>
+          <NGi
+            span="18"
+            class="carousel-img"
           >
-            <img
-              class="carousel-img"
-              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+            <NCarousel
+              autoplay
+              centered-slides
             >
-            <img
-              class="carousel-img"
-              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
-            >
-            <img
-              class="carousel-img"
-              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
-            >
-            <img
-              class="carousel-img"
-              src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
-            >
-          </NCarousel>
-        </NGi>
-      </NGrid>
+              <img
+                class="carousel-img"
+                src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+              />
+              <img
+                class="carousel-img"
+                src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg"
+              />
+              <img
+                class="carousel-img"
+                src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg"
+              />
+              <img
+                class="carousel-img"
+                src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+              />
+            </NCarousel>
+          </NGi>
+        </NGrid>
+
+        <NCard
+          class="card-border"
+          size="large"
+        >
+          <template #header>
+            <NGradientText> 限时秒杀 </NGradientText>
+          </template>
+          <NGrid>
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+          </NGrid>
+        </NCard>
+
+        <NCard
+          class="card-border"
+          size="large"
+        >
+          <template #header>
+            <NGradientText> 猜你喜欢 </NGradientText>
+          </template>
+          <NGrid>
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+
+            <NGi span="4">
+              <NCard
+                class="card-border"
+                :bordered="false"
+                hoverable
+                @click="openUrl('https://www.baidu.com')"
+              >
+                <NList
+                  :bordered="false"
+                  :show-divider="false"
+                >
+                  <NListItem>
+                    <img
+                      class="card-border"
+                      src="https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg"
+                    />
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NButton text>
+                        <NEllipsis style="max-width: 8rem"> iphone 14 pro max 256g </NEllipsis>
+                      </NButton>
+                    </div>
+                  </NListItem>
+                  <NListItem>
+                    <div class="flex justify-center">
+                      <NText type="primary"> $100 </NText>
+                    </div>
+                  </NListItem>
+                </NList>
+              </NCard>
+            </NGi>
+          </NGrid>
+        </NCard>
+      </NSpace>
     </div>
   </div>
 </template>
@@ -237,5 +460,10 @@
     height: 450px;
     border-radius: 1rem;
     object-fit: cover;
+  }
+
+  .card-border {
+    width: 100%;
+    border-radius: 1rem;
   }
 </style>
